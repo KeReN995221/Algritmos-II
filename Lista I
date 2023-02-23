@@ -1,0 +1,119 @@
+1. Escreva um algoritmo que calcule o diâmetro, a área e a circunferência de um círculo, sabendo
+que o único dado disponível é o seu raio.
+Diâmetro = 2 * Raio
+Área = PI * Raio2
+Circunferência= 2 * PI * Raio
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float pi = 3.14;
+    float raio;
+    printf("Informe o valor do raio: ");
+    scanf("%f", &raio);
+    
+    float diametro = 2 * raio;
+    float area = pi * pow(raio,2);
+    float circ = 2 * pi * raio;
+    
+    printf("Diâmetro: %.2f\n", diametro);
+    printf("Área: %.2f\n", area);
+    printf("Circunferência: %.2f\n", circ);
+    
+
+    return 0;
+}
+__________________________________________________________________________________________________________________________________________________________________________
+2. Escreva um algoritmo para ler o salário mensal e o percentual de reajuste. Calcular e escrever o
+valor do novo salário
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float salario, reajuste, novo;
+    printf("Informe o salário: ");
+    scanf("%f", &salario);
+    
+    printf("Informe o percentual do reajuste: ");
+    scanf("%f", &reajuste);
+    
+    novo = salario + (salario * reajuste) / 100;
+    
+    printf("Salário com reajuste: %.2f",novo);
+    
+    
+
+    return 0;
+}
+__________________________________________________________________________________________________________________________________________________________________________
+3. Elabore um Algoritmo para converter uma temperatura em graus Celsius para Fahrenheit (ºF=32
++ 1.8ºC).
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int cel;
+    printf("Informe a temperatura em graus celcius: ");
+    scanf("%d", &cel);
+
+    
+    float fah = cel * 1.8 + 32;
+    
+    printf("A temperatura convertida para Fahrenheit é: %.1f",fah);
+    
+
+    return 0;
+}
+__________________________________________________________________________________________________________________________________________________________________________
+4. Ler dois números inteiros e imprimir a soma.
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int num1, num2;
+    printf("Informe um valor inteiro: ");
+    scanf("%d", &num1);
+    
+    printf("Informe outro valor inteiro: ");
+    scanf("%d", &num2);    
+
+    int soma = num1 + num2;
+    
+    printf("A soma é: %d", soma);
+
+    return 0;
+}
+__________________________________________________________________________________________________________________________________________________________________________
+5. Entrar com dois números e imprimir a média aritmética.
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int num1, num2;
+    printf("Informe um valor inteiro: ");
+    scanf("%d", &num1);
+    
+    printf("Informe outro valor inteiro: ");
+    scanf("%d", &num2);    
+
+    int media = (num1 + num2) / 2;
+    
+    printf("A média é: %d", media);
+
+    return 0;
+}
