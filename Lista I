@@ -1,3 +1,4 @@
+#LISTA I: 
 1. Escreva um algoritmo que calcule o diâmetro, a área e a circunferência de um círculo, sabendo
 que o único dado disponível é o seu raio.
 Diâmetro = 2 * Raio
@@ -26,7 +27,7 @@ int main()
 
     return 0;
 }
-__________________________________________________________________________________________________________________________________________________________________________
+##################################################
 2. Escreva um algoritmo para ler o salário mensal e o percentual de reajuste. Calcular e escrever o
 valor do novo salário
 
@@ -51,7 +52,7 @@ int main()
 
     return 0;
 }
-__________________________________________________________________________________________________________________________________________________________________________
+##################################################
 3. Elabore um Algoritmo para converter uma temperatura em graus Celsius para Fahrenheit (ºF=32
 + 1.8ºC).
 
@@ -73,7 +74,7 @@ int main()
 
     return 0;
 }
-__________________________________________________________________________________________________________________________________________________________________________
+##################################################
 4. Ler dois números inteiros e imprimir a soma.
 
 
@@ -95,7 +96,7 @@ int main()
 
     return 0;
 }
-__________________________________________________________________________________________________________________________________________________________________________
+##################################################
 5. Entrar com dois números e imprimir a média aritmética.
 
 
@@ -117,3 +118,391 @@ int main()
 
     return 0;
 }
+
+LISTA II:
+
+##################################################
+1. Criar um programa em C que calcule e imprima a área de um losango.
+Formula: (diagonal maior * diagonal menor) dividido por 2
+
+
+#include <stdio.h>
+
+
+int main() {
+    
+    float area, diagonal_maior, diagonal_menor;
+    
+    printf("Diagonal meior: ");
+    scanf("%d", &diagonal_maior);
+    5
+    printf("Diagonal menor: ");
+    scanf("%d", &diagonal_menor);
+    
+    area = (diagonal_maior * diagonal_menor) / 2;
+    
+    printf("Area: %d\n", area);
+    
+    return 0;
+}
+
+##################################################
+ 2. Entrar com os valores dos catetos de um triângulo retângulo e imprimir a hipotenusa.
+Formula: hipotenusa = raiz (b2 + c2);
+
+
+#include <stdio.h>
+
+
+int main() {
+    
+    float area, diagonal_maior, diagonal_menor;
+    
+    printf("Diagonal meior: ");
+    scanf("%d", &diagonal_maior);
+    5
+    printf("Diagonal menor: ");
+    scanf("%d", &diagonal_menor);
+    
+    area = (diagonal_maior * diagonal_menor) / 2;
+    
+    printf("Area: %d\n", area);
+    
+    return 0;
+}
+
+
+##################################################
+3. Entrar com a razão de uma PA e o valor do 1º termo. Calcule e imprima o 10o termo.
+Formula: decimotermo = primeirotermo + (posição desejada – 1) * razão
+
+
+#include <stdio.h>
+
+
+int main() {
+    
+    float razao, primeiro_termo, decimo_termo;
+    
+    printf("Digite a razao da PA: ");
+    scanf("%f", &razao);
+    
+    printf("Digite o primeiro termo: ");
+    scanf("%f", &primeiro_termo);
+    
+    decimo_termo = primeiro_termo + 8 * razao;
+    
+    printf("O décimo termo é: %.2f\n", decimo_termo);
+    
+    return 0;
+}
+
+
+##################################################
+4. Entrar com a razão de uma PG e o valor do 1º termo. Calcular e imprimir o 5o termo.
+Formula: quintotermo = primeirotermo * razão (quintaposicao – 1
+
+
+#include <stdio.h>
+#include <math.h>
+
+
+int main() {
+    
+    double razao, primeiro_termo, quinto_termo;
+    
+    printf("Digite a razao da PG: ");
+    scanf("%lf", &razao);
+    
+    printf("Digite o primeiro termo: ");
+    scanf("%lf", &primeiro_termo);
+    
+    quinto_termo = primeiro_termo * pow(razao, 4);
+    
+    printf("O décimo termo é: %.2lf\n", quinto_termo);
+    
+    return 0;
+}
+
+
+##################################################
+5. Faça um programa em C que leia 5 valores e determine o menor deles.
+
+
+
+#include <stdio.h>
+
+int main() {
+    int nums[5];
+    int menor;
+    
+    printf("Digite cinco números:\n");
+    
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &nums[i]);
+    }
+    
+    menor = nums[0];
+    
+    for (int i = 1; i < 5; i++) {
+        if (nums[i] < menor) {
+            menor = nums[i];
+        }
+    }
+    
+    
+    printf("O menor valor  foi: %d", menor);
+    
+    return 0;
+}
+
+##################################################
+6. Dado 3 valores (X, Y, Z) que representam os lados de um triangulo, verifique se estes valores 
+formam um triangulo eqüilátero, isósceles ou escaleno. 
+Dica: o triangulo eqüilátero tem os três lados iguais, isósceles dois lados iguais e escaleno os três 
+lados diferentes.
+
+
+#include <stdio.h>
+
+int main() {
+    int x, y, z;
+    
+    printf("Digiteo os valores de x,y e z: ");
+    scanf("%d %d %d", &x, &y, &z);
+    
+    if(x == y && y == z) {
+        printf("Triangulo Equilátero.");
+        
+    } else if (x == y || x == z || y == z){
+        printf("Triangulo isóceles.");
+        
+    }else {
+        printf("Triangulo escaleno.");
+        
+    }
+  
+    return 0;
+}
+
+##################################################
+7. Escreva um programa em C para ler 2 valores (considere que não serão informados valores 
+iguais) e escrever o maior deles.
+
+
+#include <stdio.h>
+
+int main() {
+    int valor1, valor2;
+    
+    printf("Digite dois valores:\n");
+    scanf("%d %d", &valor1, &valor2);
+    
+    
+    if(valor1 > valor2) {
+        printf("O maior é: %d\n",valor1);
+        
+    } else if(valor2 > valor1){
+        printf("O menor é: %d",valor2);
+        
+    }else {
+        printf("Não são aceito números iguais. Volte ao inicio!");
+        
+    }
+  
+    return 0;
+}
+
+
+
+
+##################################################
+8. Elabore um programa em C que peça três números ao utilizador, e que indique qual dos três é o 
+maior
+
+
+#include <stdio.h>
+
+int main() {
+    
+    int num1, num2, num3;
+    
+    printf("Digite três numeros: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    
+    if(num1 > num2 && num1 > num3) {
+        printf("O numero maior é: %d\n", num1);
+        
+    }else if(num2 > num1 && num2 > num3) {
+        printf("O numero maior é: %d\n", num2);
+        
+    }else {
+        printf("O maior é: %d\n", num3);
+    }
+  
+    return 0;
+}
+
+LISTA III: 
+1. Faça um programa em C que leia palavras digitadas pelo usuário e que, para cada uma delas, 
+imprima a frase "Você digitou a palavra: xxxx" (onde "xxxx" é a palavra digitada). O programa 
+deve repetir essas operações até o usuário digitar a palavra "fim". O programa não deve 
+imprimir a frase de resposta quando a palavra digitada for "fim".
+
+
+#include <stdio.h>
+#include <string.h>
+
+#define TAMANHO_MAX 50
+
+int main() {
+    char palavra[TAMANHO_MAX];
+
+    while (strcmp(palavra, "fim") != 0) {
+        printf("Digite uma palavra ou digite fim para sair: ");
+        scanf("%s", palavra);
+
+        if (strcmp(palavra, "fim") != 0) {
+            printf("Você digitou a palavra: %s\n", palavra);
+        }
+    }
+
+    return 0;
+}
+
+##################################################
+2. Escreva um programa em C para ler 2 valores (se o segundo valor informado for ZERO 
+apresentará a seguinte mensagem "Valor inválido" e deverá ler um novo valor até que ele seja 
+um valor válido) e imprimir o resultado da divisão do primeiro pelo segundo.
+
+
+#include <stdio.h>
+
+int main() {
+    int valor1, valor2, divisao;
+
+    printf("Digite um valor: ");
+    scanf("%d", &valor1);
+
+    printf("Digite um valor: ");
+    scanf("%d", &valor2);
+
+    if(valor2 == 0) {
+            printf("Valor invalido\n");
+            
+        } while(valor2 == 0);
+
+        divisao = valor1 / valor2;
+        printf("O resultado da divisao de %d por %d é: %d\n", valor1, valor2, divisao);
+
+    return 0;
+}
+##################################################
+3.  Escreva um programa em C para ler as notas da 1a. e 2a. avaliações de um aluno, calcular e 
+imprimir a média semestral. Faça com que o algoritmo só aceite notas válidas (0 a 10). Cada 
+nota deve ser validada separadamente
+
+#include <stdio.h>
+
+int main() {
+    
+    float n1, n2, media;
+    
+    do {
+        printf("Nota da primeira avaliação: ");
+        scanf("%f", &n1);
+
+        if(n1 < 0 || n1 > 10) {
+            printf("nota invalida\n");
+        }
+
+    } while(n1 < 0 || n1 > 10);
+    
+    do {
+        printf("Nota da segunda avaliação: ");
+        scanf("%f", &n2);
+
+        if(n2 < 0 || n2 > 10) {
+            printf("Nota invalida\n");
+        }
+
+    } while(n2 < 0 || n2 > 10);
+
+    media = (n1 + n2) / 2;
+    
+    printf("A media semestral do aluno foi: %.2f", media);
+    
+    return 0;
+}
+
+##################################################
+4. Escreva um programa em C para ler as notas da 1a. e 2a. avaliações de um aluno, calcular e 
+imprimir a média semestral. Faça com que o algoritmo só aceite notas válidas (0 a 10). Cada 
+nota deve ser validada separadamente
+printf("Informe o salário: ");
+    scanf("%f", &salario);
+
+#include <stdio.h>
+
+int main() {
+    
+    int notaUm = 0;
+    int notaDois = 0;
+    
+    printf("Informe a 1ª nota: ");
+    scanf("%f", &notaUm);
+    
+    printf("Informe a 2ª nota: ");
+    scanf("%f", &notaDois);
+
+    if(notaUm >=0 and notaDois ,= 10)
+        {
+         if(notaUm >=0 and notaDois ,= 10){
+            int media = (notaUm + notaDois) / 2;
+            printf("A media é : ", media);
+         }
+        }
+    
+    }
+    
+    return 0;
+}
+
+##################################################
+5. Escrever os números de 1 a 10 utilizando uma estrutura ENQUANTO. 
+
+#include <stdio.h>
+
+int main() {
+    int i = 1; 
+    
+    while (i <= 10) { 
+        printf("%d\n", i); 
+        i++;
+    }
+    
+    return 0;
+}
+##################################################
+6. Ler 10 valores, calcular e escrever a média aritmética destes valores
+
+
+#include <stdio.h>
+
+int main() {
+    int i;
+    float valor, soma = 0, mediaAritmetica;
+    
+    for (i = 1; i <= 10; i++) {
+        printf(" %d valor: ", i);
+        scanf("%f", &valor);
+        soma += valor; 
+    }
+    
+    mediaAritimetica = soma / 10;
+    
+    printf("A media aritmética é: %.2f", mediaAritimetica);
+    
+    return 0;
+}
+
