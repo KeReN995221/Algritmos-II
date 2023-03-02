@@ -1,0 +1,51 @@
+LISTA IV:
+
+1. Criar um programa em c que armazene números em dois vetores inteiros de cinco elementos cada.
+Gere e imprima o vetor soma (soma dos dois vetores).
+
+
+int main() {
+	
+	int vetor1 [5];
+	int vetor2 [5];
+	int soma [5];
+	int i;
+	int valor;
+	
+	for (i = 0; i <5 ; i++) {
+		printf("Informe os valores do vetor 1: ");
+		scanf("%d",&vetor1[i]);
+		
+	}
+	
+	for (i = 0; i <5 ; i++) {
+		printf("Informe os valores do vetor 2: ");
+		scanf("%d",&vetor2[i]);
+		
+	}
+	
+	for (i = 0; i <5 ; i++) {
+
+		soma[i] = vetor2[i] + vetor1[i];
+		
+		printf("A soma do vetor e: %d\n", soma[i]);
+	}
+	return 0;
+}
+
+#####################################################
+2. Armazenar 15 números inteiros em um vetor NUM e imprimir os números fornecidos dizendo se
+eles são par ou impar.
+3. Armazenar 8 números em um vetor e apresentar os números que forem múltiplos de 6.
+4. Criar um vetor que armazena o preço de 5 produtos, atualizar o preço em 10%.
+
+*/
+int main() {
+	int NUM [15];
+	int i;
+	for (i = 0; i <15; i++){
+		if (NUM[i] %2 )
+	}
+
+	return 0;
+}
