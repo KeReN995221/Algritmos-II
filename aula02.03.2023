@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop 
+
+int main() {
+	
+	int x [100];
+	int i;
+	for (i = 0; i < 100; i++)
+		x[i] = i;
+	for (i = 0; i < 100; i++)
+		printf("%d ,",x[i]);
+	
+	printf("\n\n");
+
+	
+	
+	
+	
+	return 0;
+}
+
+int main() {
+	
+	char nome [25];
+	int i;
+	printf("Digite um nome: ");
+	gets(nome);
+	printf ("O nome que você digitou e: ");
+	puts(nome);
+	
+	return 0;
+}
+
+1. Criar um programa em c que armazene números em dois vetores inteiros de cinco elementos cada.
+Gere e imprima o vetor soma (soma dos dois vetores).
+2. Armazenar 15 números inteiros em um vetor NUM e imprimir os números fornecidos dizendo se
+eles são par ou impar.
+3. Armazenar 8 números em um vetor e apresentar os números que forem múltiplos de 6.
+4. Criar um vetor que armazena o preço de 5 produtos, atualizar o preço em 10%.
+
+
+int main () {
+	int matriz[3][3];
+	for (int x =0; x<3; x++){
+		
+		for (int y = 0; y <3; y++){
+			printf("Informe os valores da matriz: \n");
+			scanf("%d",&matriz[x][y]);
+		}
+	}
+	for (int x =0; x<3; x++){
+		
+		for (int y = 0; y <3; y++){
+			if(x==y){
+				
+				printf("Elemento da diagonal principal: %d\n",matriz[x][y]);
+			}
+			
+		}
+	}
+	
+	
+	return 0;
+}
+
+
+*/
