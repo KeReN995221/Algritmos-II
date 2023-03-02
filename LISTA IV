@@ -36,6 +36,23 @@ int main() {
 #####################################################
 2. Armazenar 15 números inteiros em um vetor NUM e imprimir os números fornecidos dizendo se
 eles são par ou impar.
+int main() {
+	int NUM [15];
+	int i;
+	for (i = 0; i <15; i++){
+		printf("Informe os valores do vetor: ");
+		scanf("%d",&NUM[i]);
+	}
+	for (i = 0; i <15; i++){
+		if (NUM[i] %2 == 0){
+				printf("O numero e par %d\n", NUM[i]);
+			} else {
+				printf("Onumero e impar%d\n", NUM[i]);
+			}
+	}
+	return 0;
+}
+#####################################################
 3. Armazenar 8 números em um vetor e apresentar os números que forem múltiplos de 6.
 4. Criar um vetor que armazena o preço de 5 produtos, atualizar o preço em 10%.
 
