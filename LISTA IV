@@ -71,13 +71,18 @@ int main() {
 #####################################################
 4. Criar um vetor que armazena o preço de 5 produtos, atualizar o preço em 10%.
 
-*/
 int main() {
-	int NUM [15];
+	int NUM [5];
 	int i;
-	for (i = 0; i <15; i++){
-		if (NUM[i] %2 )
+	int atualizar [5];
+	for (i = 0; i <5; i++){
+		printf("Informe os valores do vetor: ");
+		scanf("%d",&NUM[i]);
 	}
-
+	for (i = 0; i <5; i++){
+		atualizar [i] = (NUM[i] * 0.1) + NUM[i];
+		printf("A atualização do salario e: %d\n", atualizar[i]);
+		
+	}
 	return 0;
 }
