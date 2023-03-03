@@ -54,6 +54,21 @@ int main() {
 }
 #####################################################
 3. Armazenar 8 números em um vetor e apresentar os números que forem múltiplos de 6.
+int main() {
+	int NUM [8];
+	int i;
+	for (i = 0; i <8; i++){
+		printf("Informe os valores do vetor: ");
+		scanf("%d",&NUM[i]);
+	}
+	for (i = 0; i <8; i++){
+		if (NUM[i] %6 == 0){
+				printf("O numero e multiplo de 6 %d\n", NUM[i]);
+		}
+	}
+	return 0;
+}
+#####################################################
 4. Criar um vetor que armazena o preço de 5 produtos, atualizar o preço em 10%.
 
 */
