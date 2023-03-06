@@ -86,3 +86,85 @@ int main() {
 	}
 	return 0;
 }
+
+LISTA V: 
+ 1. Faça um programa em C que leia valores para uma matriz 3x3 de valores inteiros e 
+depois multiplique esta matriz por um valor inteiro x a ser fornecido pelo usuário;
+
+#include <iostream>
+int main(int argc, char** argv) {
+	int matriz [3][3];
+	int i;
+	int y;
+	int valorSecreto; 
+
+	for (i = 0; i <3 ; i++) {
+		for (y = 0; y <3; y++){
+			printf("Informe os valores da matriz: ");
+			scanf("%d",&matriz[i][y]);
+			
+		}
+		
+		
+	}
+	printf("Informe um valor inteiro para multiplicar: ");
+	scanf("%d",&valorSecreto);
+	
+	for (i = 0; i <3 ; i++) {
+		for (y = 0; y <3; y++){
+		printf("O VALOR DA MATRIZ E: %d\n", matriz[i][y] * valorSecreto);
+		
+		
+		}
+	
+	
+	}
+	
+	return 0;
+}
+#####################################################
+2. Faça um programa em C que leia o nome e as quatro notas bimestrais para um 
+conjunto de 10 alunos. Depois de preenchida a estrutura o algoritmo deverá exibir uma 
+listagem dos nomes dos alunos seguidos da informação aprovado ou reprovado. 
+Considere que os alunos que obtiveram média inferior a 6,0 estão reprovados.
+#include <iostream>
+#include <conio.h>
+#include <string.h> 
+
+int main() {
+	char nome [10][50];
+	float notas [10] [4], medias;
+	for (int i = 0; i < 10; i++){
+		printf("Digite o nome do aluno %d: ", i +1);
+		scanf("%d", nome[i]);
+			
+		for (int k = 0; k < 4; k++){
+			printf("Digite a %d° nota do aluno: ", k + 1, i + 1 );
+			scanf("%f", &notas[i][k]);
+				
+			}
+		}
+			
+	
+	for (int k = 0; k < 10; k++){
+			
+		medias = 0;
+		printf("%s",nome[k]);
+		for (int l = 0; l < 4; l++){
+			medias += notas[k][l];
+			}
+		}
+		
+		medias = medias / 4;
+		
+	if (medias < 6.0) {
+		printf("!Reprovado(a)!");
+		}
+		else{
+			printf("!Aprovado(a)!");
+		
+		}
+		return 0;
+	} // ESSE CÓDIGO APRESENTA UM POSIVEL ERRO, PORTANTO DEVE-SE OTIMIZAR 
+	
+	
