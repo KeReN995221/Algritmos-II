@@ -173,3 +173,29 @@ int main() {
 	}
 	
 	
+#####################################################
+3. Faça um programa em C que armazene um total de 10 valores inteiros digitados pelo
+usuário e, posteriormente, informe quantos dos números digitados são múltiplos de 7.
+
+#include <iostream>
+#include <conio.h>
+#include <string.h> 
+
+int main() {
+	int vetor [10];
+	int i;
+	for (i = 0; i <10; i++){
+		printf("Informe os valores do vetor: ");
+		scanf("%d",&vetor[i]);
+	}
+	
+	for (i = 0; i <10; i++){
+	    
+	    
+	    if (vetor[i] %7 == 0){
+	        printf("%d e multiplo de 7 \n", vetor[i]);
+	    }
+	}
+	
+	return 0;
+}
