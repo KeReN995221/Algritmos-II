@@ -127,6 +127,7 @@ int main(int argc, char** argv) {
 conjunto de 10 alunos. Depois de preenchida a estrutura o algoritmo deverá exibir uma 
 listagem dos nomes dos alunos seguidos da informação aprovado ou reprovado. 
 Considere que os alunos que obtiveram média inferior a 6,0 estão reprovados.
+
 #include <iostream>
 #include <conio.h>
 #include <string.h> 
@@ -135,36 +136,40 @@ int main() {
 	char nome [10][50];
 	float notas [10] [4], medias;
 	for (int i = 0; i < 10; i++){
-		printf("Digite o nome do aluno %d: ", i +1);
-		scanf("%d", nome[i]);
+		printf("Digite o nome do %d° aluno: ", i +1);
+		scanf("%s", nome[i]);
 			
 		for (int k = 0; k < 4; k++){
-			printf("Digite a %d° nota do aluno: ", k + 1, i + 1 );
+			printf("Digite a %d° nota do %d° aluno: ", k + 1, i + 1 );
 			scanf("%f", &notas[i][k]);
 				
+	
 			}
+	    printf("#################################### \n");
 		}
 			
 	
 	for (int k = 0; k < 10; k++){
-			
+		
+		printf("%s \n",nome[k]);	
 		medias = 0;
-		printf("%s",nome[k]);
 		for (int l = 0; l < 4; l++){
+		    
 			medias += notas[k][l];
 			}
-		}
 		
-		medias = medias / 4;
 		
-	if (medias < 6.0) {
-		printf("!Reprovado(a)!");
-		}
-		else{
-			printf("!Aprovado(a)!");
+		medias = (medias / 4);
 		
-		}
+    	if (medias < 6.0) {
+    		printf("!Reprovado(a)!\n");
+    	}
+    	else{
+    			printf("!Aprovado(a)!\n");
+    		
+    		}
+	  }
 		return 0;
-	} // ESSE CÓDIGO APRESENTA UM POSIVEL ERRO, PORTANTO DEVE-SE OTIMIZAR 
+	}
 	
 	
