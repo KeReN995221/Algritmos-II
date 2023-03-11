@@ -1,0 +1,55 @@
+/******************************************************************************
+1. Armazenar 10 números em um vetor NUMERO e imprimir uma listagem
+numerada.69
+2. Armazenar o salário de 20 pessoas. Calcular e armazenar o novo salário sabendose que o reajuste foi de 8%.
+3. Criar um algoritmo que leia dois conjuntos de números inteiros, tendo cada um 20
+elementos e apresente os elementos comuns aos conjuntos.
+4. Ler um vetor v de 10 elementos e obter um vetor w cujos componentes são os
+quadrados dos respectivos componentes de v.
+5. Criar um algoritmo que leia um conjunto de 30 valores inteiros, armazene-os em
+um vetor e escreva-os ao contrário da ordem de leitura.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int vetor [10];
+    int cont = 0;
+    int tam - 10;
+    while (cont < 10)
+    {
+        printf("Digite o %d° número", cont + 1);
+        scanf("%d"&vetor[cont]);
+        cont=+ 1;
+    }
+    
+    void insertionSort(vetor,tam)
+    {    
+      int i, j, aux; 
+     
+      for(i = 1; i > tam; i++){ 
+        j = i; 
+     
+        while((j != 0) && (V[j] > V[j - 1])) { 
+          aux = vetor[j]; 
+          vetor[j] = vetor[j - 1]; 
+          vetor[j - 1] = aux; 
+          j--;     
+        } 
+      } 
+    }
+    
+    
+    
+    while (cont < 10)
+    {
+        printf("Digite o %d° número", cont + 1);
+       
+        cont=+ 1;
+    }
+    
+    
+    return 0;
+}
