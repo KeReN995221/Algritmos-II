@@ -384,21 +384,21 @@ int main()
     }
     
     for (int i = 0; i < quantidade; i++){
-        rintf("%s\n", automovel[cont].fabricante);
+        	printf("%s\n", automovel[i].fabricante);
         
-		printf("%s\n", automovel[cont].modelo);
+		printf("%s\n", automovel[i].modelo);
 		
-		printf("%d\n", automovel[cont].ano);
+		printf("%d\n", automovel[i].ano);
 		
-		printf("%s\n", automovel[cont].placa);
+		printf("%s\n", automovel[i].placa);
 		
-		printf("%s\n", automovel[cont].cor);
+		printf("%s\n", automovel[i].cor);
 		
-		printf("%c\n", automovel[cont].tipoCombustivel);
+		printf("%c\n", automovel[i].tipoCombustivel);
 		
-		printf("%f\n", automovel[cont].preco);
+		printf("%f\n", automovel[i].preco);
 		
-		printf("%f\n", automovel[cont].valorIPVA);
+		printf("%f\n", automovel[i].valorIPVA);
     }
     
     return 0;
@@ -406,3 +406,5 @@ int main()
 
 
 #####################################################
+
+
