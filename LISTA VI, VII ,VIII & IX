@@ -518,6 +518,32 @@ int main()
     return 0;
 }
 
+
+
+#####################################################
+4. Numa viação, uma passagem de ônibus inclui os seguintes campos: número, 
+código do local de partida, código do local de chegada, poltrona, tipo de assento (J 
+– janela e C – corredor). Faça a definição do registro relativo a esta passagem.
+
+struct Passagem {
+    int numero;
+    int cod_partida;
+    int cod_chegada;
+    int poltrona;
+    char tipo_assento; 
+};
+
+int main(){
+	struct Passagem minha_passagem;
+
+	minha_passagem.numero = 1234;
+	minha_passagem.cod_partida = 10;
+	minha_passagem.cod_chegada = 20;
+	minha_passagem.poltrona = 15;
+	minha_passagem.tipo_assento = 'J';
+
+return 0;
+}
 #####################################################
 LISTA IX:
 
