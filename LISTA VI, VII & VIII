@@ -226,3 +226,29 @@ int main()
     
     return 0;
 }
+
+#####################################################
+3. Criar um algoritmo que armazene dados em uma matriz de ordem 5 e imprima
+toda a matriz.
+int main()
+{
+    int matriz [5][5];
+    for ( int cont = 0; cont < 5; cont++){
+        for (int i = 0; i < 5; i++){
+            printf("Informe um número: ");
+            scanf("%d", &matriz[cont][i]);
+        }
+    }
+  
+  
+   for ( int cont = 0; cont < 5; cont++){
+        for (int i = 0; i < 5; i++){
+            printf("%d\n", matriz[cont][i]); 
+            
+        }
+    }
+    
+    return 0;
+}
+
+#####################################################
