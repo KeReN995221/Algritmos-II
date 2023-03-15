@@ -613,5 +613,105 @@ int main() {
 }
 
 #####################################################
+2. Criar uma estrutura chamada DadosAluno, que armazena o nome e idade de 
+um aluno. Na função main: criar uma variável que é uma estrutura
+DadosAluno; ler o nome e a idade de um aluno e armazenar na variável criada; 
+exibir na tela o nome e a idade do aluno.
 
+#include <stdio.h>
+
+struct DadosAluno {
+    char nome[50];
+    int idade;
+};
+
+int main() {
+    struct DadosAluno aluno;
+
+    printf("Digite o nome do aluno: ");
+    scanf(" %[^\n]", aluno.nome);
+    printf("Digite a idade do aluno: ");
+    scanf("%d", &aluno.idade);
+
+    printf("\nNome: %s\n", aluno.nome);
+    printf("Idade: %d\n", aluno.idade);
+
+    return 0;
+}
+
+#####################################################
+3. Considerando o exercício anterior, criar uma variável vetor da estrutura 
+DadosAluno. O programa deve obter o nome e a idade de 10 alunos. Depois, 
+estes dados devem ser exibidos.
+
+#include <stdio.h>
+
+struct DadosAluno {
+    char nome[50];
+    int idade;
+};
+
+int main() {
+    struct DadosAluno alunos[10];
+
+    for (int i = 0; i < 10; i++) {
+        printf("Digite o nome do aluno %d: ", i+1);
+        scanf(" %[^\n]", alunos[i].nome);
+        printf("Digite a idade do aluno %d: ", i+1);
+        scanf("%d", &alunos[i].idade);
+    }
+
+    printf("\nDados dos alunos:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Aluno %d:\n", i+1);
+        printf("  Nome: %s\n", alunos[i].nome);
+        printf("  Idade: %d\n", alunos[i].idade);
+    }
+
+    return 0;
+}
+
+#####################################################
+4. Fazer um programa que cria uma estrutura livro, que contém os elementos 
+nome, editora, isbn, ano de edição, número de páginas e preço. Criar uma
+variável desta estrutura que é um vetor de 5 elementos. Ler os valores para a 
+estrutura e imprimir a média do número de páginas dos livros
+
+#include <stdio.h>
+
+struct Estrutura {
+    char nome[50];
+    char editora[50];
+    int isbn;
+    int ano;
+    int paginas;
+    float preco;
+};
+
+int main() {
+    struct Estrutura livros[5];
+    int total_paginas = 0;
+
+    for (int i = 0; i < 5; i++) {
+        printf("Digite o nome do livro %d: ", i+1);
+        scanf(" %[^\n]", livros[i].nome);
+        printf("Digite a editora do livro %d: ", i+1);
+        scanf(" %[^\n]", livros[i].editora);
+        printf("Digite o ISBN do livro %d: ", i+1);
+        scanf("%d", &livros[i].isbn);
+        printf("Digite o ano de edição do livro %d: ", i+1);
+        scanf("%d", &livros[i].ano);
+        printf("Digite o número de páginas do livro %d: ", i+1);
+        scanf("%d", &livros[i].paginas);
+        printf("Digite o preço do livro %d: ", i+1);
+        scanf("%f", &livros[i].preco);
+
+        total_paginas += livros[i].paginas;
+    }
+
+    float media_paginas = (float) total_paginas / 5;
+    printf("\nA média de número de páginas dos livros é: %.2f\n", media_paginas);
+
+    return 0;
+}
 
