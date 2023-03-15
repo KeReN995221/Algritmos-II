@@ -407,4 +407,117 @@ int main()
 
 #####################################################
 
+2. Defina um registro para armazenar os seguintes dados de clientes de um banco:
+nome do cliente, código da agência, data de nascimento (formato dd/mm/aaaa),
+saldo atual e situação (cliente ‘V’IP ou ‘N’ORMAL).
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct banco {
+	char nomeCliente[45];
+	int codigoAgencia;
+	char dataNascimento [8];
+	char situacao;
+	float saldoAtual;
+
+};
+
+int main()
+{   
+    int quantidade; 
+    printf("Quantidade de clientes à cadastrar: ");
+    scanf("%d",&quantidade);
+    struct banco cliente [quantidade]
+    
+    for (int i = 0; i < quantidade; i++){
+        printf("Informe o nome do cliente: ");
+        scanf("%s",cliente[i].nomeCliente);
+       
+        printf("Informe o codigo da agência: ");
+        scanf("%d",cliente[i].codigoAgencia);
+        
+        printf("Informe a data de nascimento: ");
+        scanf("%s", cliente[i].dataNascimento);
+        
+        printf("Informe se o cliente é V(vip) ou N(normal): ");
+        scanf("%s",cliente[i].situacao);
+        
+        printf("Informe o saldo atual da conta: ");
+        scanf("%f",cliente[i].saldoAtual);
+        
+        
+    }
+    
+    for (int i = 0; i < quantidade; i++){
+        printf("%s\n",cliente[i].nomeCliente);
+        
+		printf("%d\n",cliente[i].codigoAgencia);
+		
+		printf("%s\n", cliente[i].dataNascimento);
+		
+		printf("%s\n",cliente[i].situacao);
+		
+		printf("%f\n",cliente[i].saldoAtual);
+		
+		
+    }
+    
+    return 0;
+}
+
+
+#####################################################
+
+3. Num certo município, vários proprietários de imóveis estão com atraso com o
+pagamento do IPTU. Faça um algoritmo para ler os dados do imóvel e imprimir o
+valor do IPTU com a multa a ser paga, considerando os dados do imóvel: número
+de cadastro, valor do imposto e quantidade de meses em atraso. A multa é de R$
+10,00 por cada mês de atraso.
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct imovel {
+	
+	int numeroCadastro;
+	float valorImposto;
+    int mesAtraso;
+};
+
+int main()
+{   
+    int quantidade; 
+    printf("Quantidade de proprietários que estão com o IPTU com atraso para cadastrar: ");
+    scanf("%d",&quantidade);
+    struct imovel propietario [quantidade]
+    
+    for (int i = 0; i < quantidade; i++){
+        printf("Informe o numero do cadastro: ");
+        scanf("%d",propietario[i].numeroCadastro);
+       
+        printf("Informe o valor do imposto: ");
+        scanf("%d",propietario[i].valorImposto);
+        
+        printf("Informe a quantidade de meses em atraso: ");
+        scanf("%f", propietario[i].mesAtraso);
+        
+    }
+    
+    for (int i = 0; i < quantidade; i++){
+        printf("%d\n",propietario[i].numeroCadastro);
+        
+		printf("%d\n",propietario[i].valorImposto);
+		
+		printf("%f\n",((propietario[i].mesAtraso) * 10.00));
+		
+		
+		
+    }
+    
+    return 0;
+}
+
+#####################################################
+LISTA IX:
 
