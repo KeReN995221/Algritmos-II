@@ -326,3 +326,83 @@ int main()
 
 #####################################################
 LISTA VIII:
+
+1. Um vendedor de automóveis armazena os seguintes dados de um veículo:
+fabricante, modelo, ano, placa, cor, tipo de combustível (A é álcool e G é
+gasolina), preço e valor do IPVA. Escreva a declaração de um registro para estes
+dados.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct vendedor {
+	char fabricante[25];
+	char modelo[25];
+	int ano;
+	char placa[8];
+	char cor[25];
+	char tipoCombustivel;
+	float preco;
+	float valorIPVA;
+	
+};
+
+int main()
+{   
+    int quantidade; 
+    printf("Quantidade de veículos á cadastrar: ");
+    scanf("%d",&quantidade);
+    struct vendedor veiculo[quantidade]
+    
+    for (int i = 0; i < quantidade; i++){
+        printf("Informe o nome do fabricante: ");
+        scanf("%s",veiculo[i].fabricante);
+       
+        printf("Informe o modelo: ");
+        scanf("%s",veiculo[i].modelo);
+        
+        printf("Informe o ano: ");
+        scanf("%d", veiculo[i].ano);
+        
+        printf("Informe a placa: ");
+        scanf("%s",veiculo[i].placa);
+        
+        printf("Informe a cor: ");
+        scanf("%s",veiculo[i].placa);
+        
+        printf("Informe o tipo do combústivel: ");
+        scanf("%s",veiculo[i].tipoCombustivel);
+        
+        printf("Informe o valor: ");
+        scanf("%f",veiculo[i].preco);
+        
+        printf("Informe o valor do IPVA: ");
+        scanf("%f",veiculo[i].valorIPVA);
+        
+        
+    }
+    
+    for (int i = 0; i < quantidade; i++){
+        rintf("%s\n", automovel[cont].fabricante);
+        
+		printf("%s\n", automovel[cont].modelo);
+		
+		printf("%d\n", automovel[cont].ano);
+		
+		printf("%s\n", automovel[cont].placa);
+		
+		printf("%s\n", automovel[cont].cor);
+		
+		printf("%c\n", automovel[cont].tipoCombustivel);
+		
+		printf("%f\n", automovel[cont].preco);
+		
+		printf("%f\n", automovel[cont].valorIPVA);
+    }
+    
+    return 0;
+}
+
+
+#####################################################
