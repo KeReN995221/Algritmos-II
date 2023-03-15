@@ -558,3 +558,60 @@ a) Um relatório contendo as informações de cada tecido.
 b) Um relatório dos tecidos com estoque inferior a 50 metros.
 c) Um relatório dos tecidos com preço inferior a R$ 0,60 o metro.
 
+#include <stdio.h>
+
+struct Tecido {
+    int codigo;
+    char descricao[50];
+    float preco;
+    int estoque;
+};
+
+int main() {
+    struct Tecido tecidos[30];
+    int i;
+
+   
+    for(i=0; i<30; i++) {
+        printf("\nTecido %d:\n", i+1);
+        printf("Código: ");
+        scanf("%d", &tecidos[i].codigo);
+        printf("Descrição: ");
+        scanf(" %[^\n]", tecidos[i].descricao);
+        printf("Preço: ");
+        scanf("%f", &tecidos[i].preco);
+        printf("Estoque: ");
+        scanf("%d", &tecidos[i].estoque);
+    }
+
+  
+    printf("\nRELATÓRIO DE TECIDOS\n");
+    printf("Código | Descrição                 | Preço (R$/m) | Estoque (m)\n");
+    for(i=0; i<30; i++) {
+        printf("%6d | %-25s | %10.2f | %10d\n", tecidos[i].codigo, tecidos[i].descricao, tecidos[i].preco, tecidos[i].estoque);
+    }
+
+   
+    printf("\nRELATÓRIO DE TECIDOS COM ESTOQUE INFERIOR A 50 METROS\n");
+    printf("Código | Descrição                 | Preço (R$/m) | Estoque (m)\n");
+    for(i=0; i<30; i++) {
+        if(tecidos[i].estoque < 50) {
+            printf("%6d | %-25s | %10.2f | %10d\n", tecidos[i].codigo, tecidos[i].descricao, tecidos[i].preco, tecidos[i].estoque);
+        }
+    }
+
+    
+    printf("\nRELATÓRIO DE TECIDOS COM PREÇO INFERIOR A R$ 0,60 O METRO\n");
+    printf("Código | Descrição                 | Preço (R$/m) | Estoque (m)\n");
+    for(i=0; i<30; i++) {
+        if(tecidos[i].preco < 0.6) {
+            printf("%6d | %-25s | %10.2f | %10d\n", tecidos[i].codigo, tecidos[i].descricao, tecidos[i].preco, tecidos[i].estoque);
+        }
+    }
+
+    return 0;
+}
+
+#####################################################
+
+
