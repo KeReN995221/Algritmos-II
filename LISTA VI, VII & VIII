@@ -138,7 +138,6 @@ int main()
 5. Criar um algoritmo que leia um conjunto de 30 valores inteiros, armazene-os em
 um vetor e escreva-os ao contrário da ordem de leitura.
 
-*******************************************************************************/
 
 #include <stdio.h>
 #include <math.h>
@@ -148,20 +147,22 @@ int main()
     int vetor1 [3];
     int vetor2 [3];
     int cont = 0;
+    int i = 0;
     while (cont < 3){   
         printf("Digite o %d° elemento: ", cont + 1);
-        scanf("%d",&vetor1[cont]);    
+        scanf("%d",&vetor1[cont]);
         cont+= 1;
     }
     
     
-    int c = 0;
-    while (c < 3){   
-        
-        vetor2[c] = vetor1[cont];
-        cont-= 1;
-        c+= 1;
-        printf("%d\n", vetor2[c], "%d vetor 1: \n", vetor1[cont]);
+   
+    for ( cont = 2; cont >= 0; cont--){
+        vetor2[i] = vetor1[cont];
+        i++;
+    }
+    
+    for (int a = 0; a < 3; a++){
+        printf("%d\n", vetor2[a]);
     }
     
     
@@ -169,3 +170,6 @@ int main()
     
     return 0;
 }
+#####################################################
+LISTA VII:
+
