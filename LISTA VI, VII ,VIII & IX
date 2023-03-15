@@ -547,4 +547,14 @@ return 0;
 #####################################################
 LISTA IX:
 
+1. A fábrica de tecidos Bicho-da-Seda armazena as seguintes informações sobre 
+cada tecido:
+- código numérico
+- descrição do tecido
+- preço do metro
+- quantidade em estoque (em metros)
+Faça um algoritmo que leia um lote de 30 tecidos, e depois imprima:
+a) Um relatório contendo as informações de cada tecido.
+b) Um relatório dos tecidos com estoque inferior a 50 metros.
+c) Um relatório dos tecidos com preço inferior a R$ 0,60 o metro.
 
