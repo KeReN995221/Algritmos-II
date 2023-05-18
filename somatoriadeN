@@ -1,0 +1,31 @@
+/******************************************************************************
+Faça um programa que calcule o fatorial de um número lido, utilizando uma função
+*******************************************************************************/
+#include <stdio.h>
+
+
+int fibonati (int num); 
+
+int main()
+{
+    int num = 0;
+    printf("Informe o número que você queira Fibnatizar: ");
+    scanf("%d", &num);
+    printf("O numero fibonatizado e: %d",fibonati(num));
+    return 0;
+}
+
+int fibonati(int num){
+    if (num == 0){
+        return 0;
+    }
+   
+    else if (num == 1){
+       return 1;
+    }
+    
+    else if (num > 1){
+        return ( fibonati(num) + fibonati(num - 1));
+    }
+    
+}
