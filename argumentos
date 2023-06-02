@@ -1,0 +1,94 @@
+#include <stdio.h>
+
+/*Construa uma função em C que receba como argumentos dois 
+valores inteiros, calcule e exiba os valores obtidos pela 
+multiplicação entre ambos e pela adição entre ambos. Construa três 
+soluções diferentes:
+
+
+
+*/
+/*
+void incrementa (int *x) // poteiro 
+{
+	*x = *x + 1;
+	printf("O valor de x dentro da função  e: %d \n", *x); 
+}
+
+int main mult ()
+{
+	int x = 10;
+	incrementa(&x);
+	
+	printf("Valor de x fora da funcao %d: \n ", x);
+	return 0;
+	
+}
+
+
+// a) Com passagem de parâmetros por valor;
+
+void mult (int a, int b) 
+{
+	int mult = a * b;
+	printf("O resultado da multiplicacao e: %d \n ", mult);
+}
+
+int main ()
+{
+	int a = 10;
+	int b = 2;
+	mult(a, b);
+	
+	return 0;
+	
+}
+
+
+// b) Com passagem de parâmetros por referência;
+
+
+void operacao(int *a, int *b, int *mult, int *soma) 
+{
+	*mult = *a * *b;
+	*soma = *a + *b;
+	
+}
+
+int main ()
+{	
+	int mult, soma;
+	int a = 10;
+	int b = 2;
+	operacao(&a, &b, &mult, &soma);
+	printf("O resultado da multiplicacao e: %d \n ",  mult);
+	printf("O resultado da soma e: %d \n ",  soma);
+	return 0;
+	
+}
+
+
+
+// c) Sem passagem de parâmetros.
+
+
+void op () 
+{	int mult, soma;
+	int a = 10;
+	int b = 2;
+	mult = a * b;
+	soma = a + b;
+	printf("O resultado da multiplicacao e: %d \n ", mult);
+	printf("O resultado da soma e: %d \n ", soma);
+}
+
+int main ()
+{
+	op();
+	
+	return 0;
+	
+}
+
+
+*/
