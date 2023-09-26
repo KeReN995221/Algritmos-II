@@ -132,7 +132,11 @@ void remover (No **lista, int valor){
 int main(){
 
 	No *lista=NULL;
-	
+	int opcao; 
+	while (while opcao != 5){
+	    printf("Menu de opção: \n1. Inserir um elemento no começo da lsita\n2. Inserir um elemento no meio da lista\n3. Inserir um novo elemento no fim\n4. Remover um elemento \n5. Sair\nOpção: ");
+	    scanf("%d", &opcao);
+	}
 	imprimirLista(lista);
 	adicionarInicio(&lista, 10);
 	imprimirLista(lista);
