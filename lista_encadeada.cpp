@@ -12,27 +12,26 @@ typedef struct no{
 
 No* criarNo (int valor){
 	No *novo = (No *)malloc(sizeof(No));
-	if(novo){
-		novo->proximo = valor;
+	if(novo != NULL){
+		novo->valor = valor;
 		return novo;
 	}else{
-		printf("Erro de alocação de memória")
+		printf("Erro de alocaÃ§Ã£o de memÃ³ria");
 	}
+	
 	return NULL;
 }
 
 
 void adicionarInicio(No **lista, int valor){
-
+    No *novo = criarNo(valor);
 	if(novo){
-
-		No *novo = criarNo(valor);
 		novo->proximo = *lista;
 		*lista = novo;
 
 	}else{
 
-		printf("Erro ao alocar memória");
+		printf("Erro ao alocar memÃ³ria");
 
 	}
 	
@@ -52,15 +51,17 @@ void adicionarMeio(No **lista, int valor, int proximoValor ){
 			No *aux = *lista;
 			
 			while ( aux->proximo &&aux->valor!= proximoValor){
-				aux = aux->proximo
+				aux = aux->proximo;
 			}
-			novo->proximo = aux->proximo;
+		    
+		    novo->proximo = aux->proximo;
 			aux->proximo = novo;	
 		}	
 			
-}
+	    
+	}
 		
-
+}
 
 void adicionarFim(No **lista, int valor){
 
@@ -91,19 +92,7 @@ void adicionarFim(No **lista, int valor){
 	}
 
 }
-void remover(No **lista, int valor, int valorRemovido ){
-	No *novo = criarNo(valor);
-	if(novo){
-		if (*lista==NULL){
-			
-		}else{
-			No *aux = *lista;
-			while(aux->proximo->valor = valorRemovido
-				aux->auxiliar->proximo = remover->proximo;
-		}
-	}
-	
-}
+
 
 void imprimirLista(No *aux){
 
@@ -120,8 +109,25 @@ void imprimirLista(No *aux){
 }
 
 
+void remover (No **lista, int valor){
+    No *aux = *lista;
+    if(aux != NULL){
+        if (aux->valor==valor){
+            *lista = aux->proximo;
+            free(aux);
+        }else{
+            while(aux->proximo && aux->proximo->valor!=valor){
+                aux = aux->proximo;
+            }
+            if(aux->proximo){
+                No *remover = aux->proximo;
+                aux->proximo = remover->proximo;
+                free(remover);
+            }
+        }
+    }
 
-
+}
 
 int main(){
 
@@ -140,7 +146,9 @@ int main(){
 	imprimirLista(lista);
 	adicionarInicio(&lista, 100);
 	imprimirLista(lista);
+	remover(&lista, 50);
+	imprimirLista(lista);
 	
 	return 0;
-
 }
+
