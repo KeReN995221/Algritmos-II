@@ -1,0 +1,115 @@
+/******************************************************************************
+
+    Ponteiro:
+        Implemente uma pilha para simular o histórico de navegação em um navegador da web.
+        O usuário deve ter as seguintes opções: visitar um site, voltar, exibir todo o histórico ou sair.
+        O sistema deve permitir que o usuário digite o site, por exemplo,
+        ifpr.edu.br. Ao escolher a função voltar, exibir a URL do site.
+        Utilize lista encadeada para realizar a implementação da pilha.
+
+
+*********************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct No{
+    char url[100];
+    struct No *proximo;
+    
+}No; 
+
+
+typedef struct Pilha{
+    No *topo;
+    int tamanho;
+}Pilha; 
+
+void inicializarPilha(Pilha* p){
+    p->topo = NULL;
+    p->tamanho = 0;
+}
+
+void push(Pilha *p, int valor){
+    No *novo = (No*)malloc(sizeof(No));
+    novo->valor = valor;
+    if(novo == NULL){
+        novo->proximo = NULL;
+        p->topo = novo;
+    }else{
+        novo->proximo = p->topo;
+        p->topo = novo;
+    }
+}
+
+void pop(Pilha *p){
+    No *remover = p->topo;
+    if(p!=NULL){
+        p->topo = remover->proximo; 
+        free(remover);
+    }
+    
+}
+
+void visitarSite(Pilha* p, const char* url){
+    No* novo = (No*)malloc(sizeof(No));
+    if(novo){
+        strncpy(novo->url, url, sizeof(novo->url));
+        novo->proximo = p->topo;
+        p->topo = novo;
+        p->tamanho++;
+        printf("Abriu: \n");
+       
+    }else{
+        printf("Erro 404\n");
+    }
+}
+
+void voltar(Pilha* p){
+    
+    if(p->tamanho==0){
+        printf("sem histórico");
+        return;
+    }
+    No* aux = p->topo;
+    if(aux->proximo!=NULL){
+        printf("Site acessado anteriormente: %s\n", aux->proximo->url);
+        p->topo = aux->proximo;
+        free(aux);
+        p->tamanho--;
+        
+    }else{
+        printf("Existe apenas um site. %s\n", aux->url);
+    }
+}
+
+void exibirHisorico(Pilha* p){
+    printf("\n===Histórico===\n");
+    No* aux = p->topo;
+    while(aux!=NULL){
+        printf("%s\n", aux->url);
+        aux = aux->proximo;
+ 
+    }
+    printf("\n==============\n");
+}
+
+
+int main()
+{
+    Pilha pilha;
+    char url[100];
+    
+    inicializarPilha(&pilha);
+    printf("Informe a url do site: \n");
+    scanf("%s", url);
+    visitarSite(&pilha, url);
+    printf("Informe a url do site: \n");
+    scanf("%s", url);
+    visitarSite(&pilha, url);
+    voltar(&pilha);
+    exibirHisorico(&pilha);
+    
+    
+
+    return 0;
+}
